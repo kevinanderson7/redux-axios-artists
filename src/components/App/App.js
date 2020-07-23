@@ -61,12 +61,22 @@ class App extends Component {
             <h1 className="App-title">Famous Artists</h1>
           </header>
           <br />
-          <ArtistList
+          {/* <ArtistList
             refreshArtists={this.refreshArtists}
             artistList={this.state.artists}
+          /> */}
+          {/* <Route exact path="/addArtist" component={ArtistForm} /> */}
+          {/* <Route exact path="/allArtists" component={ArtistList} /> */}
+          <Route
+            exact
+            path="/allArtists"
+            render={() => <ArtistList refreshArtists={this.refreshArtists} />}
           />
-          <Route exact path="/addArtist" component={ArtistForm} />
-          <Route exact path="/allArtists" component={ArtistList} />
+          <Route
+            exact
+            path="/addArtist"
+            render={() => <ArtistForm refreshArtists={this.refreshArtists} />}
+          />
         </div>
       </Router>
     );
