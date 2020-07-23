@@ -53,12 +53,13 @@ class ArtistForm extends Component {
         <h2>Add Artist</h2>
         <form onSubmit={this.handleSubmit}>
           <input
+            className="form-style"
             value={this.state.newArtist.name}
             onChange={this.handleChange}
             required
             placeholder="Artist Name"
           ></input>
-          <button>Add New Artist</button>
+          <button className="form-style">Add New Artist</button>
         </form>
       </div>
     );
